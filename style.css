@@ -1,4 +1,4 @@
-/* Reset dasar */
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -8,98 +8,139 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    margin: 0;
 }
 
-/* Navigasi */
+/* Navbar */
 nav {
-    position: ;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    background-color: #0056b3;
-    padding: 1rem 2rem;
+    padding: 10px;
+    background-color: #004d99;
     color: #fff;
 }
 
-nav .logo-container img {
-    height: 70px;
+.logo-container img {
+    width: 80px;
+    height: auto;
 }
 
 nav h4 {
-    margin: 0;
-    font-size: 1.2rem;
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
 }
 
-nav h4 p {
+nav p {
     font-size: 0.9rem;
-    margin: 0;
-    color: #d4e2f7;
+    margin-top: 5px;
 }
 
-nav .search-box input {
-    padding: 0.5rem;
+.search-box {
+    margin: 15px 0;
+    width: 90%;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px;
     border: none;
     border-radius: 4px;
-    outline: none;
-    width: 200px;
 }
 
-nav ul {
-    display: flex;
+ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
 }
 
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: #ff0000;
+.li-navbar a {
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #d4e2f7;
-}
-
-/* Konten Utama */
-main .container-content {
-    text-align: center;
-    padding: 2rem;
-}
-
-main .container-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #0056b3;
-}
-
-main .container-content p {
-    font-size: 1rem;
-    color: #555;
-    margin: 1rem auto;
-    max-width: 800px;
-    line-height: 1.8;
-}
-
-iframe {
-    width: 100%;
-    max-width: 600px;
-    border: 1px solid #ddd;
+    color: #fff;
+    background-color: #0073e6;
+    padding: 8px 12px;
     border-radius: 4px;
-    margin: 1rem auto;
-    display: block;
+    font-size: 0.9rem;
 }
 
+.li-navbar a:hover {
+    background-color: #005bb5;
+}
 
+/* Main Content */
+.container-content {
+    padding: 20px;
+    text-align: center;
+}
 
-footer.container-footer p {
-    font-size: 0.9rem;
+.container-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.container-content iframe {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.container-content p {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Footer */
+.container-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004d99;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-container img {
+        width: 100px;
+    }
+
+    nav h4 {
+        font-size: 1.2rem;
+    }
+
+    nav p {
+        font-size: 1rem;
+    }
+
+    ul {
+        gap: 20px;
+    }
+
+    .li-navbar a {
+        font-size: 1rem;
+    }
+
+    .container-content h3 {
+        font-size: 2rem;
+    }
+
+    .container-content iframe {
+        width: 600px;
+        height: 450px;
+    }
 }
 
 /* Responsivitas */
